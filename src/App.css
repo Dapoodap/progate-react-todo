@@ -12,12 +12,11 @@
 .todoItem{
     text-align: center;
     margin-bottom: 60px;
-    padding: 10px 20px 10px 20px;
+    padding: 10px 30px 10px 30px;
     border-radius: 50px;
     background: #dad8d8;
-    cursor: pointer;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     gap: 30px;
     align-items: center;
 
