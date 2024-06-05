@@ -1,8 +1,27 @@
 .tittle{
-    font-size: 50px;
+    font-size: 60px;
     width: fit-content;
     margin: auto;
+    margin-bottom: 50px;
 }
 .todoCompo{
-    border: 1px solid red;
+    margin: auto;
+   padding: 20px;
+   width: 50%;
+}
+.todoItem{
+    text-align: center;
+    margin-bottom: 60px;
+    padding: 10px 20px 10px 20px;
+    border-radius: 50px;
+    background: #dad8d8;
+    cursor: pointer;
+
+}
+.todoItem:hover{
+    box-shadow:  20px 20px 9px #bebebe,
+             -20px -20px 9px #ffffff;
+}
+.todoItem > p{
+    font-size: 30px;
 }

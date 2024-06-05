@@ -23,7 +23,7 @@ function App() {
 
   return (
     <>
-    <h1 className='tittle'>Hello World!</h1>
+    <h1 className='tittle'>My Todo List!</h1>
     <Todos todos={todos}/>
     </>
   )
