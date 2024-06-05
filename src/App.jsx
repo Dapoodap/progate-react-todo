@@ -1,7 +1,6 @@
 import { useState } from 'react'
 import './App.css'
 import { Todos } from './components/Todos'
-import { TbMoodEmpty } from "react-icons/tb";
 
 
 function App() {
@@ -19,6 +18,17 @@ function App() {
     let updatedTodo = todos.filter(todo => todo.id != id);
     setTodos(updatedTodo);
   }
+  const toggleAdd = (title) =>{
+    const data = {
+      id : todos.length + 1,
+      title,
+      completed : false
+    }
+    const updatedTodo = [...todos, data]
+    setTodos(updatedTodo)
+
+  }
+
   const [todos, setTodos] = useState([
     {
       id: 1,
@@ -40,7 +50,7 @@ function App() {
   return (
     <>
     <h1 className='tittle'>My Todo List!</h1>
-    {todos.length ? <Todos todos={todos} toggleDelete={toggleDelete} toggleCompleted={toggleCompleted}/> : <h1 style={{ width:'fit-content',display:'flex',alignItems:'center',gap:'10px',margin:'auto',fontSize:'50px',color:'blue' }}>Kosong <TbMoodEmpty/></h1>}
+    <Todos todos={todos} toggleAdd={toggleAdd} toggleDelete={toggleDelete} toggleCompleted={toggleCompleted}/>
     </>
   )
 }
