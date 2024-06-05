@@ -3,6 +3,16 @@ import './App.css'
 import { Todos } from './components/Todos'
 
 function App() {
+  const toggleCompleted = (id) => {
+    const updatedTodo =  todos.map((todo)=>{
+      if (todo.id === id) {
+        todo.completed = !todo.completed
+      }
+      return todo
+    })
+
+    setTodos(updatedTodo)
+  }
   const [todos, setTodos] = useState([
     {
       id: 1,
@@ -24,7 +34,7 @@ function App() {
   return (
     <>
     <h1 className='tittle'>My Todo List!</h1>
-    <Todos todos={todos}/>
+    <Todos todos={todos} toggleCompleted={toggleCompleted}/>
     </>
   )
 }

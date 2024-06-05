@@ -16,6 +16,10 @@
     border-radius: 50px;
     background: #dad8d8;
     cursor: pointer;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    align-items: center;
 
 }
 .todoItem:hover{
@@ -24,4 +28,7 @@
 }
 .todoItem > p{
     font-size: 30px;
+}
+.todoItem > .done{
+    text-decoration: line-through;
 }
